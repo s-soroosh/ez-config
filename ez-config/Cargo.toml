@@ -1,6 +1,6 @@
 [package]
 name = "ez_config"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "A lightweight and simple to use mapper from environment variables to config classes."
 license = "MIT"
