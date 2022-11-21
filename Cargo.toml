@@ -1,6 +1,6 @@
 [workspace]
 
 members = [
-  "ez-config-env",
+  "ez-config",
   "ez-config-example"
 ]
