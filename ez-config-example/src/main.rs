@@ -1,4 +1,4 @@
-use ez_config_env::EnvConfig;
+use ez_config::EnvConfig;
 
 trait MyTrait {
     fn answer() -> i32 {

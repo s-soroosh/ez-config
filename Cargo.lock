@@ -6,12 +6,23 @@ version = 3
 name = "ez-config-example"
 version = "0.1.0"
 dependencies = [
- "ez_config_env",
+ "ez_config 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
-name = "ez_config_env"
-version = "0.1.0"
+name = "ez_config"
+version = "0.1.1"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "ez_config"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "143fdc79f8c9ead1d8871cb17af97f8395e3c9eb89691bcdffddc70e596a2ab8"
 dependencies = [
  "proc-macro2",
  "quote",
