@@ -5,6 +5,10 @@ edition = "2021"
 description = "A lightweight and simple to use mapper from environment variables to config classes."
 license = "MIT"
 keywords = ["config", "configuration", "environment-variable", "env"]
+homepage = "https://github.com/s-soroosh/ez-config"
+repository = "https://github.com/s-soroosh/ez-config"
+
+readme = "../README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
