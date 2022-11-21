@@ -38,11 +38,13 @@ fn generate_from_env(data: &Data) -> Vec<TokenStream> {
                     let result: Vec<TokenStream> = fields.named.iter().map(|f| {
                         let name = &f.ident;
                         let env_variable = format!("{}", name.as_ref().unwrap().to_string());
-                        let is_string = if let syn::Type::Path(ref p) = f.ty {
-                            p.path.segments.len() == 1 && p.path.segments[0].ident == "String"
-                        } else { false };
+                        let field_type = if let syn::Type::Path(ref p) = f.ty {
+                            &p.path.segments[0].ident
+                        } else { panic!("Couldn't find type!") };
                         quote! {
-                            #name: ::std::env::var(#env_variable).unwrap()
+                            #name: ::std::env::var(#env_variable).ok()
+                            .and_then(|v| v.parse::<#field_type>().ok())
+                            .unwrap()
                         }
                     }).collect();
                     result
