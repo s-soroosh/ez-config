@@ -10,9 +10,12 @@ trait MyTrait {
 #[derive(Debug)]
 struct Foo {
     name: String,
+    last_name: String,
+    age: u16,
+    field_boolean: bool,
 }
 
 fn main() {
     let foo = Foo::from_env();
-    println!("{}", foo.name);
+    println!("{:#?}", foo);
 }
