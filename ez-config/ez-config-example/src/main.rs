@@ -13,10 +13,6 @@ struct Foo {
 }
 
 fn main() {
-    // print!("{}", Foo::answer());
-    let foo = Foo {
-        name: "Soroosh".to_string()
-    };
-
-    println!("{:#?}", foo.name);
+    let foo = Foo::from_env();
+    println!("{}", foo.name);
 }
